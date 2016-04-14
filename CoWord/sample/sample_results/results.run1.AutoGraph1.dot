@@ -1,0 +1,32 @@
+graph G{
+    UserContDemo_ASTRON [label="UserContDemo_ASTRON", fontsize=12, shape=box];
+    Will_Charge [label="Will_Charge", fontsize=12, shape=box];
+    ConcerSec_Very [label="ConcerSec_Very", fontsize=12];
+    Important_Privacy [label="Important_Privacy", fontsize=12, shape=box];
+    ConcerSecEcom_Very [label="ConcerSecEcom_Very", fontsize=12];
+    IPResell_DSTRON [label="IPResell_DSTRON", fontsize=12];
+    UseDemoOther_DSTRON [label="UseDemoOther_DSTRON", fontsize=12];
+    SecAFactor_Deciding [label="SecAFactor_Deciding", fontsize=12];
+    AdvNet_DSTRON [label="AdvNet_DSTRON", fontsize=12];
+    PrivCom_ASTRON [label="PrivCom_ASTRON", fontsize=12, shape=box];
+    MassMails_DSTRON [label="MassMails_DSTRON", fontsize=12, shape=box];
+    ValueAnon_ASTRON [label="ValueAnon_ASTRON", fontsize=12, shape=box];
+    AttSpam_Delete [label="AttSpam_Delete", fontsize=12];
+    IntShop_LifeEasy [label="IntShop_LifeEasy", fontsize=12, shape=box];
+    DirMark_DSTRON [label="DirMark_DSTRON", fontsize=12];
+    IntShop_LifeEasy -- AttSpam_Delete [label="14, 784, 0.533", fontsize=10, style=dotted];
+    IPResell_DSTRON -- UserContDemo_ASTRON [label="9, 802, 0.617", fontsize=10, style=dotted];
+    IntShop_LifeEasy -- PrivCom_ASTRON [label="2, 1000, 0.68", fontsize=10, style=bold];
+    IntShop_LifeEasy -- Will_Charge [label="1, 990, 0.726", fontsize=10, style=bold];
+    ValueAnon_ASTRON -- PrivCom_ASTRON [label="6, 871, 0.64", fontsize=10, style=bold];
+    Important_Privacy -- ConcerSec_Very [label="11, 730, 0.593", fontsize=10, style=dotted];
+    MassMails_DSTRON -- PrivCom_ASTRON [label="5, 954, 0.668", fontsize=10, style=bold];
+    PrivCom_ASTRON -- Important_Privacy [label="4, 966, 0.671", fontsize=10, style=bold];
+    MassMails_DSTRON -- AdvNet_DSTRON [label="10, 803, 0.61", fontsize=10, style=dotted];
+    MassMails_DSTRON -- UseDemoOther_DSTRON [label="13, 778, 0.591", fontsize=10, style=dotted];
+    MassMails_DSTRON -- Important_Privacy [label="7, 907, 0.636", fontsize=10, style=bold];
+    DirMark_DSTRON -- MassMails_DSTRON [label="8, 736, 0.633", fontsize=10, style=dotted];
+    PrivCom_ASTRON -- UserContDemo_ASTRON [label="3, 943, 0.68", fontsize=10, style=bold];
+    SecAFactor_Deciding -- Important_Privacy [label="15, 551, 0.437", fontsize=10, style=dotted];
+    ConcerSecEcom_Very -- Important_Privacy [label="12, 765, 0.592", fontsize=10, style=dotted];
+}

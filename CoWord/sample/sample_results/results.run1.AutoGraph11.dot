@@ -1,0 +1,33 @@
+graph G{
+    UserContDemo_ASTRON [label="UserContDemo_ASTRON", fontsize=12];
+    Will_Charge [label="Will_Charge", fontsize=12];
+    Important_Convenience [label="Important_Convenience", fontsize=12];
+    IntPrivLaws_ASTRON [label="IntPrivLaws_ASTRON", fontsize=12];
+    InfImprovSite_ASTRON [label="InfImprovSite_ASTRON", fontsize=12, shape=box];
+    Important_Privacy [label="Important_Privacy", fontsize=12];
+    ConcerSecEcom_Very [label="ConcerSecEcom_Very", fontsize=12];
+    AdvNet_ASOME [label="AdvNet_ASOME", fontsize=12, shape=box];
+    PrivCom_ASTRON [label="PrivCom_ASTRON", fontsize=12];
+    MassMails_DSTRON [label="MassMails_DSTRON", fontsize=12];
+    ValueAnon_ASTRON [label="ValueAnon_ASTRON", fontsize=12];
+    SecAFactor_Significant [label="SecAFactor_Significant", fontsize=12];
+    AttSpam_Delete [label="AttSpam_Delete", fontsize=12];
+    IntShop_LifeEasy [label="IntShop_LifeEasy", fontsize=12];
+    SpamPolicy_Registry [label="SpamPolicy_Registry", fontsize=12];
+    AssumeAliases_ASTRON [label="AssumeAliases_ASTRON", fontsize=12];
+    AttSpam_Delete -- InfImprovSite_ASTRON [label="7, 99, 0.064", fontsize=10, style=dotted];
+    AdvNet_ASOME -- InfImprovSite_ASTRON [label="1, 26, 0.054", fontsize=10, style=bold];
+    InfImprovSite_ASTRON -- IntPrivLaws_ASTRON [label="14, 64, 0.042", fontsize=10, style=dotted];
+    IntShop_LifeEasy -- InfImprovSite_ASTRON [label="2, 145, 0.108", fontsize=10, style=dotted];
+    InfImprovSite_ASTRON -- Important_Convenience [label="9, 57, 0.061", fontsize=10, style=dotted];
+    InfImprovSite_ASTRON -- Will_Charge [label="3, 131, 0.097", fontsize=10, style=dotted];
+    InfImprovSite_ASTRON -- UserContDemo_ASTRON [label="11, 95, 0.052", fontsize=10, style=dotted];
+    SpamPolicy_Registry -- InfImprovSite_ASTRON [label="12, 61, 0.046", fontsize=10, style=dotted];
+    AssumeAliases_ASTRON -- InfImprovSite_ASTRON [label="15, 56, 0.041", fontsize=10, style=dotted];
+    ValueAnon_ASTRON -- InfImprovSite_ASTRON [label="8, 100, 0.064", fontsize=10, style=dotted];
+    Important_Privacy -- InfImprovSite_ASTRON [label="10, 102, 0.056", fontsize=10, style=dotted];
+    SecAFactor_Significant -- InfImprovSite_ASTRON [label="5, 84, 0.067", fontsize=10, style=dotted];
+    PrivCom_ASTRON -- InfImprovSite_ASTRON [label="4, 125, 0.081", fontsize=10, style=dotted];
+    MassMails_DSTRON -- InfImprovSite_ASTRON [label="6, 109, 0.066", fontsize=10, style=dotted];
+    ConcerSecEcom_Very -- InfImprovSite_ASTRON [label="13, 78, 0.044", fontsize=10, style=dotted];
+}

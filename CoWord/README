@@ -1,0 +1,165 @@
+// This is part of the CoWord software. 
+//
+//Copyright Notice: Portions of the code in this distribution are 
+//copyrighted by various parties and is marked accordingly.  
+//Where code is not marked, copyright is asserted as one or more of:
+//  Copyright 1997 by Purdue Research Foundation
+//  Copyright 1998-2001 by Ivan Krsul.
+//  Copyright 2002 by the University of Florida
+//
+//You may download and use this code for non-commercial purposes.   
+//You may reuse this code in other non-commercial programs and 
+//projects provided that this copyright notice is included, intact, 
+//with all such code and code fragments.  Any sale, operation or 
+//use of any portion of this code for profit or to support commercial 
+//activity requires a license.  Contact Ivan Krsul <ivan@acis.ufl.edu> 
+//for details.
+//
+//No warranty is express or implied for any of this code.  It is 
+//considered experimental and is provided "as is."  Any use of this code 
+//is at your own risk.
+
+INTRODUCTION 
+
+The programs in this distribution constitutes the CoWord Analysis tool
+that implements the functionality described in the
+AlgorithmDescription.pdf file.  Brielfy, Co-word analysis is a content
+analysis technique that is effective in mapping the strength of
+association between keywords in textual data. Co-word analysis reduces
+a space of descriptors (or keywords) to a set of network graphs that
+effectively illustrate the strongest associations between descriptors.
+
+Co-word analysis is an example of a graphical modeling technique that
+applies some of the ideas of association analysis.  Graphical
+modeling is a variant of statistical modeling that uses graphs to
+display models. This technique illustrates associations between keywords by
+constructing multiple networks that highlight associations between
+keywords, and where associations between networks are possible.
+
+The co-word tool was originally developed at the COAST Laboratory
+(Purdue University) and updated at the ACIS Laboratory (University of
+Florida).
+
+REQUIREMENTS 
+
+The Co-Word tool will run on Unix or Windows machines if you have all
+the necessary components. To use this software you will need to obtain:
+
+- The jakarta-oro-2.0.4.jar (available at 
+  http://jakarta.apache.org/oro/index.html)
+- jgl3.1.0.jar distribution (available at www.objectspace.com/jgl and 
+  also www.recursionsw.com/products/jgl/jgl.asp).
+- The Graphviz package as the CoWord tool produces DOT files. You can 
+  download Graphviz from http://www.research.att.com/sw/tools/graphviz/
+  and we recommend the binary distribution as Graphviz can be a pain to
+  compile and build.   Once you have installed the Graphviz packages, 
+  make sure that you have them in your search path.
+- The javac Java compiler in your search path.
+
+INSTALLATION 
+
+Place the jakarta-oro-2.0.4.jar and jgl3.1.0.jar files in the main 
+directory and you should be able to compile the Co-Word application by typing:
+
+./compile
+
+RUNNING THE CO-WORD TOOL
+
+Once compiled, you should be able to run co-word analysis experiments
+for an arbitrary database.  The first thing you should do is create a
+dump of the data.  Put this dump in a file called data.txt.
+
+The format for this data file is:
+
+     VID, Field_1_Title, Field_2_title.....
+     id1, data11, data12 ...
+     id2, data21, data22 ...
+     ...
+
+There first column is required (VID) and uniquely identifies every record
+in the data set.  Typically, this is a sequential number.
+
+The file called data.fields contains (or should contain!) a list of all
+the fields in the file you just dumped.  If you are not sure that this
+file is up to date you can generate it from your data file with the 
+following command:
+
+% ./generate_fields.pl > data.fields 
+
+You can select which fields you want to process by editing this file
+and commenting out those fields that you don't want to use.  A field
+is commented by starting the line with a #
+
+Run the dbase-to-keyword.pl program to generate, from the data.txt
+file and the data.fields file the keywords file that is needed by the
+co_word analysis tool.
+
+% ./dbase-to-keyword.pl > data.keywords 
+
+Now you can run the co_word analysis tool.  The program takes five
+parameters, maxPass1Links, maxLinks, minCoword, inDatafile and
+outDatafile.  These indicate the maximum number of pass1 links
+allowed, the maximum links allowed in total, the minimum co-occurrence
+that is needed to create a link, the file that contains the data, and
+the prefix for the generation of output files.  The program produces a
+series of .dot files and a shell script that generates the postscript
+graphs for all the networks. The shell script will be the file with the
+name given by the outDatafile parameter and the .bat extension. 
+
+If the parameters are not given they default to maxPass1Links=3,
+maxLinks=10, minCoword=3, datafile=data.keywords.
+
+For example, if the program is executed with the commands
+
+COWORD_DIR=/usr/local/CoWord; 
+java -classpath $COWORD_DIR/CoWord.jar:$COWORD_DIR/jakarta-oro-2.0.4.jar:\
+      $COWORD_DIR/jgl3.1.0.jar co_word -maxPass1Links=7 -maxLinks=15 \
+      -minCoword=25 -inDatafile=data.keywords -outDatafile=results.run1
+
+and the CoWord tool finds 3 networks, then the following files would
+be generated:
+
+    results.run1.AutoGraph1.dot
+    results.run1.AutoGraph2.dot
+    results.run1.AutoGraph3.dot
+    results.run1.AutoGraphGlobal.dot
+    results.run1.README
+    results.run1.bat
+
+The results.run1.README file contains a summary of the results, with the 
+parameters used: 
+
+      Results for CoWord analysis run.
+      Input Datafile = data.keywords
+      Output Datafile = results.run1
+      Date = Sun Apr 14 01:30:14 EDT 2002
+      maxPass1Links=7
+      maxLinks=15
+      minCoWord=25
+
+     For graph 1: density=0.6812449991703033
+                  centrality=1.6383186614385985
+     For graph 2: density=0.5773062855005264
+                  centrality=1.5876718396199598
+     For graph 3: density=0.3331163227558136
+                  centrality=1.483819004131832
+
+The results.run1.bat file contains the instructions needed to create
+the postscript graphs for the generated networks:
+
+     #!/bin/sh
+     dot -Tps -Gsize=8.5,11 -Grotate=90 -Glabel="Graph Number 1" \ 
+         results.run1.AutoGraph1.dot -o results.run1.AutoGraph1.ps
+     dot -Tps -Gsize=8.5,11 -Grotate=90 -Glabel="Graph Number 2" \
+         results.run1.AutoGraph2.dot -o results.run1.AutoGraph2.ps
+     dot -Tps -Gsize=8.5,11 -Grotate=90 -Glabel="Graph Number 3" \
+         results.run1.AutoGraph3.dot -o results.run1.AutoGraph3.ps
+     dot -Tps results.run1.AutoGraphGlobal.dot \
+         -o results.run1.AutoGraphGlobal.ps
+
+EXAMPLE RUN
+
+See the sample datafile and results in the sample directory.  To
+duplicate these results, run the "runnit" script in the sample
+directory by tpying ./runnit. Look at the results.run1.* files!
+

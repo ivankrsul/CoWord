@@ -1,0 +1,32 @@
+graph G{
+    UserContDemo_ASTRON [label="UserContDemo_ASTRON", fontsize=12];
+    Will_Charge [label="Will_Charge", fontsize=12];
+    AttSpam_Reply [label="AttSpam_Reply", fontsize=12, shape=box];
+    Important_Privacy [label="Important_Privacy", fontsize=12];
+    InfImprovSite_ASOME [label="InfImprovSite_ASOME", fontsize=12];
+    Card_Stolen [label="Card_Stolen", fontsize=12, shape=box];
+    PrivCom_ASTRON [label="PrivCom_ASTRON", fontsize=12];
+    SpamPolicy_Blacklist [label="SpamPolicy_Blacklist", fontsize=12, shape=box];
+    DirMark_DSOME [label="DirMark_DSOME", fontsize=12, shape=box];
+    SpamPolicy_Fee [label="SpamPolicy_Fee", fontsize=12, shape=box];
+    MassMails_DSTRON [label="MassMails_DSTRON", fontsize=12];
+    InfImprovSite_NEITHER [label="InfImprovSite_NEITHER", fontsize=12, shape=box];
+    AttSpam_Delete [label="AttSpam_Delete", fontsize=12];
+    ChildPriv_ASOME [label="ChildPriv_ASOME", fontsize=12, shape=box];
+    IntShop_LifeEasy [label="IntShop_LifeEasy", fontsize=12];
+    Card_Stolen -- Important_Privacy [label="14, 212, 0.145", fontsize=10, style=dotted];
+    ChildPriv_ASOME -- DirMark_DSOME [label="1, 87, 0.078", fontsize=10, style=bold];
+    ChildPriv_ASOME -- SpamPolicy_Blacklist [label="2, 66, 0.052", fontsize=10, style=bold];
+    IntShop_LifeEasy -- DirMark_DSOME [label="8, 286, 0.208", fontsize=10, style=dotted];
+    SpamPolicy_Fee -- DirMark_DSOME [label="7, 50, 0.037", fontsize=10, style=bold];
+    MassMails_DSTRON -- SpamPolicy_Blacklist [label="12, 223, 0.16", fontsize=10, style=dotted];
+    SpamPolicy_Blacklist -- Card_Stolen [label="5, 53, 0.038", fontsize=10, style=bold];
+    DirMark_DSOME -- SpamPolicy_Blacklist [label="3, 63, 0.044", fontsize=10, style=bold];
+    DirMark_DSOME -- PrivCom_ASTRON [label="9, 271, 0.187", fontsize=10, style=dotted];
+    SpamPolicy_Blacklist -- AttSpam_Reply [label="4, 45, 0.04", fontsize=10, style=bold];
+    DirMark_DSOME -- InfImprovSite_ASOME [label="13, 178, 0.147", fontsize=10, style=dotted];
+    AttSpam_Delete -- DirMark_DSOME [label="11, 222, 0.16", fontsize=10, style=dotted];
+    InfImprovSite_NEITHER -- Card_Stolen [label="6, 46, 0.038", fontsize=10, style=bold];
+    DirMark_DSOME -- Will_Charge [label="10, 258, 0.185", fontsize=10, style=dotted];
+    DirMark_DSOME -- UserContDemo_ASTRON [label="15, 224, 0.143", fontsize=10, style=dotted];
+}

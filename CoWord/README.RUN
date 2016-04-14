@@ -1,0 +1,91 @@
+// This is part of the CoWord software. 
+//
+//Copyright Notice: Portions of the code in this distribution are 
+//copyrighted by various parties and is marked accordingly.  
+//Where code is not marked, copyright is asserted as one or more of:
+//  Copyright 1997 by Purdue Research Foundation
+//  Copyright 1998-2001 by Ivan Krsul.
+//  Copyright 2002 by the University of Florida
+//
+//You may download and use this code for non-commercial purposes.   
+//You may reuse this code in other non-commercial programs and 
+//projects provided that this copyright notice is included, intact, 
+//with all such code and code fragments.  Any sale, operation or 
+//use of any portion of this code for profit or to support commercial 
+//activity requires a license.  Contact Ivan Krsul <ivan@acis.ufl.edu> 
+//for details.
+//
+//No warranty is express or implied for any of this code.  It is 
+//considered experimental and is provided "as is."  Any use of this code 
+//is at your own risk.
+
+Execution of the CoWord tool requires the execution of three distinct
+steps that we can call 1) data selection, 2) data normalization and 3)
+data processing.  The data selection stage is used to tell CoWord to
+ignore (if necessary) some fields in the data files.  The
+normalization stage requires two datafiles and produces a third
+datafile that is used as input for the data processing stage.
+
+In the data selection stage the user tells the CoWord tools that some
+fields are not to be considered in the run. This is achieved by
+commenting out some of the field names in the data.fields file.  If
+the data.fields file does not exist, then execution of
+./generate_fields.pl > data.fields generates an initial data.fields
+file.
+
+The data normalization utility assumes that the files with the names
+data.txt and data.fields are in the current working directory and
+outputs the resulting normalized data to the standard output.
+Generally, the command used to generate a normalized data file is "%
+./dbase-to-keyword.pl > data.keywords"
+
+The CoWord tool takes five parameters, maxPass1Links, maxLinks,
+minCoword, inDatafile and outDatafile.  These indicate the maximum
+number of pass1 links allowed, the maximum links allowed in total, the
+minimum co-occurrence that is needed to create a link, the file that
+contains the data, and the prefix for the output files.  If the
+parameters are not given they default to maxPass1Links=3, maxLinks=10,
+minCoword=3, inDatafile=data.keywords, outDatafile=keyword.result.
+
+The program produces a series of .dot files and a shell script that
+generates the postscript graphs for all the networks. Execution of the
+script should result in a set of postscript graphs for the networks.
+
+Hence, the input set for this program is:
+
+If the data.fields file is not provided by the user:
+
+	File0 = data.txt
+
+Execution of ./generate_fields.pl > data.fields generates the
+resulting data.fields file, and the CoWord file uses all the fields
+for the analysis run unless the user comments out some fields (by 
+using the # symbol in the beginning of the corresponding line).
+
+These files are required if you don't already have a data.keywords
+file containing the keywords to generate the graphs:
+
+	File1 = data.txt
+	File2 = data.fields
+
+Execution of ./dbase-to-keyword.pl > data.keywords generates the
+resulting data.keywords file.
+
+	File3 = data.keywords
+
+Execution of the CoWord tool with a -inDatafile=data.keywords and
+-outDatafile=XXXX parameters will generate a series of files of the
+form:
+    
+	XXXX.AutoGraphNNN.dot   (one or more of these files, where NNN is a number)
+	XXXX.AutoGraphGlobal.dot
+	XXXX.README
+	XXXX.bat
+
+Execution of the XXXX.bat script will result in a series of files of the form:
+
+	XXXXNNN.ps (one or more of these files, where NNN is a number)
+	XXXX.AutographGlobal.ps
+
+The *.dot, *.ps and XXXX.README files are considered the result of the CoWord run.
+

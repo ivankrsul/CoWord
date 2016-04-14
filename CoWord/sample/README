@@ -1,0 +1,215 @@
+// This is part of the CoWord software. 
+//
+//Copyright Notice: Portions of the code in this distribution are 
+//copyrighted by various parties and is marked accordingly.  
+//Where code is not marked, copyright is asserted as one or more of:
+//  Copyright 1997 by Purdue Research Foundation
+//  Copyright 1998-2001 by Ivan Krsul.
+//  Copyright 2002 by the University of Florida
+//
+//You may download and use this code for non-commercial purposes.   
+//You may reuse this code in other non-commercial programs and 
+//projects provided that this copyright notice is included, intact, 
+//with all such code and code fragments.  Any sale, operation or 
+//use of any portion of this code for profit or to support commercial 
+//activity requires a license.  Contact Ivan Krsul <ivan@acis.ufl.edu> 
+//for details.
+//
+//No warranty is express or implied for any of this code.  It is 
+//considered experimental and is provided "as is."  Any use of this code 
+//is at your own risk.
+
+For this example we used part of the Online Privacy and Security
+dataset from the Graphic, Visualization, & Usability Center's (GVU)
+10th WWW User Survey.  
+
+In this set, the following data was collected for each of 1482 respondents of the survey:
+
+Advertising Networks
+    Type of answer:  Selection from the following values:
+          Disagree Somewhat
+          Disagree Strongly
+          Agree Somewhat
+          Agree Strongly
+          Neither Agree or Disagree
+          No Opinion
+Anonymous Payment Systems
+    Type of answer:  Selection from the following values:
+          Disagree Somewhat
+          Disagree Strongly
+          Agree Somewhat
+          Agree Strongly
+          Neither Agree or Disagree
+          No Opinion
+Attitudes Towards Spamming
+    Type of answer:  Selection from the following values:
+          Delete
+          Retaliate
+          Reply
+          Read
+          Other
+          Not App
+Childrens Privacy
+    Type of answer:  Selection from the following values:
+          Disagree Somewhat
+          Disagree Strongly
+          Agree Somewhat
+          Agree Strongly
+          Neither Agree or Disagree
+          No Opinion
+Content Providers have Right to Resell User Information
+    Type of answer:  Selection from the following values:
+          Disagree Somewhat
+          Disagree Strongly
+          Agree Somewhat
+          Agree Strongly
+          Neither Agree or Disagree
+          No Opinion
+Direct Marketing
+    Type of answer:  Selection from the following values:
+          Disagree Somewhat
+          Disagree Strongly
+          Agree Somewhat
+          Agree Strongly
+          Neither Agree or Disagree
+          No Opinion
+Had Credit Card Number Stolen
+    Type of answer:  Yes/No
+Have Unlisted Phone Number
+    Type of answer:  Yes/No
+How Concerned about Security
+    Type of answer:  Selection from the following values:
+          A little
+          Not at all
+          Should be, but not
+          Somewhat
+          Very
+How Concerned about Security for ECommerce
+    Type of answer:  Selection from the following values:
+          A little
+          Not at all
+          Should be, but not
+          Somewhat
+          Very
+Information about Users Improves Marketing of Site
+    Type of answer:  Selection from the following values:
+          Disagree Somewhat
+          Disagree Strongly
+          Agree Somewhat
+          Agree Strongly
+          Neither Agree or Disagree
+          No Opinion
+Internet Privacy Laws
+    Type of answer:  Selection from the following values:
+          Disagree Somewhat
+          Disagree Strongly
+          Agree Somewhat
+          Agree Strongly
+          Neither Agree or Disagree
+          No Opinion
+Internet Shopping and Banking Make Life Easier
+    Type of answer:  Yes/No
+Mass Emailings
+    Type of answer:  Selection from the following values:
+          Disagree Somewhat
+          Disagree Strongly
+          Agree Somewhat
+          Agree Strongly
+          Neither Agree or Disagree
+          No Opinion
+Ought to be able to Assume Different Aliases/Roles on the Internet
+    Type of answer:  Selection from the following values:
+          Disagree Somewhat
+          Disagree Strongly
+          Agree Somewhat
+          Agree Strongly
+          Neither Agree or Disagree
+          No Opinion
+Policies Towards Spamming
+    Type of answer:  Selection from the following values:
+          Blacklist
+          Don't Know
+          Government Controls
+          Impact Fee
+          Nothing
+          Other
+          Registry
+Privacy of Communications
+    Type of answer:  Selection from the following values:
+          Disagree Somewhat
+          Disagree Strongly
+          Agree Somewhat
+          Agree Strongly
+          Neither Agree or Disagree
+          No Opinion
+Security a Factor in Online Business
+    Type of answer:  Selection from the following values:
+          A deciding factor
+          A significant factor
+          A small factor
+          Not a factor
+Use of Demographic Information in Other Mediums
+    Type of answer:  Selection from the following values:
+          Disagree Somewhat
+          Disagree Strongly
+          Agree Somewhat
+          Agree Strongly
+          Neither Agree or Disagree
+          No Opinion
+Users Ought to Have Complete Control of Demographic Info
+    Type of answer:  Selection from the following values:
+          Disagree Somewhat
+          Disagree Strongly
+          Agree Somewhat
+          Agree Strongly
+          Neither Agree or Disagree
+          No Opinion
+Value Anonymous Nature of Internet
+    Type of answer:  Selection from the following values:
+          Disagree Somewhat
+          Disagree Strongly
+          Agree Somewhat
+          Agree Strongly
+          Neither Agree or Disagree
+          No Opinion
+Which is More Important
+    Type of answer:  Selection from the following values:
+          Privacy
+          Convenience
+Willing to Use Credit Card on Web
+    Type of answer:  Yes/No
+
+The data was reformatted to eliminate spaces, shorten the labels and
+replaced No Opinions, Don't Knows and Nop App with ?.  The resulting
+data set that will be used for this example is in file
+SampleDataSet.csv.  The original dataset is in file
+SampleDataSetOriginal.csv.  
+
+The file data.keywords contains the keywords generated by the 
+dbase-to-keyword.pl program and it is what is fed into the CoWord
+tool.
+
+The file results.run1.README list the graphs generated and the
+centrality and density of each network.  In this example, there are
+11 networks generated and a quick inspection of graph number 1 shows
+that:
+
+   Density=0.6812449991703033
+   Centrality=1.6383186614385985
+
+   This is a Principal Network (as defined in the documentation) and
+   shows that there is a strong network of users that have the following
+   characteristics:
+ 
+      - Think that Privacy is more important than convenience
+      - Strongly agree that communications should be private
+      - Strongly disagree on mass mailings
+      - Strongly agree on the value of anonymity
+      - Strongly agree that users should control their demographic information
+      - Think that Internet Shopping and Banking makes life easier
+      - Are willing to use a Credit Card on the Web
+
+   The correlations are very strong (look at the number of co-occurrences in each
+   of the nodes) and represent a group that we may call Internet Shopper.  You
+   can draw your own conclusions from this and the rest of the graphs.
+

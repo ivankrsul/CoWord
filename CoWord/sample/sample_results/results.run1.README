@@ -1,0 +1,30 @@
+Results for CoWord analysis run.
+Input Datafile = sample/data.keywords
+Output Datafile = results.run1
+Date = Sun Apr 14 01:30:14 EDT 2002
+maxPass1Links=7
+maxLinks=15
+minCoWord=25
+
+For graph 1: density=0.6812449991703033
+, centrality=1.6383186614385985
+For graph 2: density=0.5773062855005264
+, centrality=1.5876718396199598
+For graph 3: density=0.3331163227558136
+, centrality=1.483819004131832
+For graph 4: density=0.18681470677256584
+, centrality=0.6571646430221394
+For graph 5: density=0.1564633883535862
+, centrality=0.5729295358874159
+For graph 6: density=0.11912798695266247
+, centrality=0.7701250994491389
+For graph 7: density=0.12574556097388268
+, centrality=0.5393083433346271
+For graph 8: density=0.07655846048146486
+, centrality=0.8323174194931892
+For graph 9: density=0.057841984555125237
+, centrality=0.4782560851347589
+For graph 10: density=0.04124313034117222
+, centrality=0.5217793912452937
+For graph 11: density=0.054507337510585785
+, centrality=0.25038280994661727

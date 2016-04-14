@@ -1,0 +1,32 @@
+graph G{
+    UseDemoOther_NEITHER [label="UseDemoOther_NEITHER", fontsize=12, shape=box];
+    ChildPriv_DSTRON [label="ChildPriv_DSTRON", fontsize=12, shape=box];
+    UserContDemo_ASTRON [label="UserContDemo_ASTRON", fontsize=12];
+    Will_Charge [label="Will_Charge", fontsize=12];
+    IntPrivLaws_NEITHER [label="IntPrivLaws_NEITHER", fontsize=12, shape=box];
+    Important_Privacy [label="Important_Privacy", fontsize=12];
+    AdvNet_DSTRON [label="AdvNet_DSTRON", fontsize=12];
+    IPResell_NEITHER [label="IPResell_NEITHER", fontsize=12, shape=box];
+    PrivCom_ASTRON [label="PrivCom_ASTRON", fontsize=12];
+    MassMails_DSTRON [label="MassMails_DSTRON", fontsize=12];
+    AdvNet_NEITHER [label="AdvNet_NEITHER", fontsize=12, shape=box];
+    ValueAnon_ASTRON [label="ValueAnon_ASTRON", fontsize=12];
+    IntShop_LifeEasy [label="IntShop_LifeEasy", fontsize=12];
+    AssumeAliases_ASTRON [label="AssumeAliases_ASTRON", fontsize=12, shape=box];
+    ChildPriv_NEITHER [label="ChildPriv_NEITHER", fontsize=12, shape=box];
+    AssumeAliases_ASTRON -- IntShop_LifeEasy [label="11, 398, 0.275", fontsize=10, style=dotted];
+    AssumeAliases_ASTRON -- ValueAnon_ASTRON [label="8, 434, 0.406", fontsize=10, style=dotted];
+    AssumeAliases_ASTRON -- MassMails_DSTRON [label="12, 382, 0.274", fontsize=10, style=dotted];
+    AssumeAliases_ASTRON -- PrivCom_ASTRON [label="9, 423, 0.312", fontsize=10, style=dotted];
+    AssumeAliases_ASTRON -- AdvNet_DSTRON [label="14, 336, 0.254", fontsize=10, style=dotted];
+    ChildPriv_NEITHER -- AssumeAliases_ASTRON [label="6, 76, 0.046", fontsize=10, style=bold];
+    AssumeAliases_ASTRON -- Important_Privacy [label="15, 367, 0.247", fontsize=10, style=dotted];
+    IPResell_NEITHER -- UseDemoOther_NEITHER [label="1, 33, 0.122", fontsize=10, style=bold];
+    AssumeAliases_ASTRON -- Will_Charge [label="13, 375, 0.267", fontsize=10, style=dotted];
+    AssumeAliases_ASTRON -- UserContDemo_ASTRON [label="10, 381, 0.284", fontsize=10, style=dotted];
+    ChildPriv_NEITHER -- IPResell_NEITHER [label="4, 28, 0.031", fontsize=10, style=bold];
+    AssumeAliases_ASTRON -- ChildPriv_DSTRON [label="7, 109, 0.105", fontsize=10, style=bold];
+    AdvNet_NEITHER -- IPResell_NEITHER [label="2, 30, 0.067", fontsize=10, style=bold];
+    ChildPriv_NEITHER -- IntPrivLaws_NEITHER [label="5, 49, 0.055", fontsize=10, style=bold];
+    AdvNet_NEITHER -- UseDemoOther_NEITHER [label="3, 29, 0.066", fontsize=10, style=bold];
+}

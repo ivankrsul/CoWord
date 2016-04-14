@@ -1,0 +1,30 @@
+graph G{
+    UserContDemo_ASTRON [label="UserContDemo_ASTRON", fontsize=12];
+    Will_Charge [label="Will_Charge", fontsize=12];
+    ConcerSec_Very [label="ConcerSec_Very", fontsize=12];
+    Important_Privacy [label="Important_Privacy", fontsize=12];
+    ConcerSecEcom_Very [label="ConcerSecEcom_Very", fontsize=12, shape=box];
+    IPResell_DSTRON [label="IPResell_DSTRON", fontsize=12, shape=box];
+    UseDemoOther_DSTRON [label="UseDemoOther_DSTRON", fontsize=12, shape=box];
+    AdvNet_DSTRON [label="AdvNet_DSTRON", fontsize=12, shape=box];
+    PrivCom_ASTRON [label="PrivCom_ASTRON", fontsize=12];
+    MassMails_DSTRON [label="MassMails_DSTRON", fontsize=12];
+    ValueAnon_ASTRON [label="ValueAnon_ASTRON", fontsize=12];
+    IntShop_LifeEasy [label="IntShop_LifeEasy", fontsize=12];
+    DirMark_DSTRON [label="DirMark_DSTRON", fontsize=12, shape=box];
+    IPResell_DSTRON -- ConcerSecEcom_Very [label="7, 617, 0.459", fontsize=10, style=bold];
+    AdvNet_DSTRON -- UseDemoOther_DSTRON [label="3, 695, 0.565", fontsize=10, style=bold];
+    AdvNet_DSTRON -- IPResell_DSTRON [label="2, 730, 0.588", fontsize=10, style=bold];
+    IPResell_DSTRON -- UserContDemo_ASTRON [label="9, 802, 0.617", fontsize=10, style=dotted];
+    AdvNet_DSTRON -- Will_Charge [label="15, 689, 0.455", fontsize=10, style=dotted];
+    IntShop_LifeEasy -- IPResell_DSTRON [label="14, 755, 0.486", fontsize=10, style=dotted];
+    ValueAnon_ASTRON -- AdvNet_DSTRON [label="13, 672, 0.491", fontsize=10, style=dotted];
+    UseDemoOther_DSTRON -- IPResell_DSTRON [label="1, 781, 0.695", fontsize=10, style=bold];
+    PrivCom_ASTRON -- AdvNet_DSTRON [label="12, 815, 0.584", fontsize=10, style=dotted];
+    DirMark_DSTRON -- MassMails_DSTRON [label="8, 736, 0.633", fontsize=10, style=dotted];
+    DirMark_DSTRON -- AdvNet_DSTRON [label="6, 593, 0.492", fontsize=10, style=bold];
+    DirMark_DSTRON -- UseDemoOther_DSTRON [label="4, 621, 0.558", fontsize=10, style=bold];
+    DirMark_DSTRON -- IPResell_DSTRON [label="5, 614, 0.514", fontsize=10, style=bold];
+    ConcerSecEcom_Very -- Important_Privacy [label="11, 765, 0.592", fontsize=10, style=dotted];
+    ConcerSecEcom_Very -- ConcerSec_Very [label="10, 635, 0.6", fontsize=10, style=dotted];
+}

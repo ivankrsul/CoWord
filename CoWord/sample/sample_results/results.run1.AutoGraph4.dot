@@ -1,0 +1,32 @@
+graph G{
+    ConcerSec_Alittle [label="ConcerSec_Alittle", fontsize=12, shape=box];
+    IntPrivLaws_ASOME [label="IntPrivLaws_ASOME", fontsize=12, shape=box];
+    ConcerSec_Somewhat [label="ConcerSec_Somewhat", fontsize=12, shape=box];
+    Will_Charge [label="Will_Charge", fontsize=12];
+    SecAFactor_Small [label="SecAFactor_Small", fontsize=12, shape=box];
+    Important_Convenience [label="Important_Convenience", fontsize=12, shape=box];
+    Important_Privacy [label="Important_Privacy", fontsize=12];
+    PrivCom_ASTRON [label="PrivCom_ASTRON", fontsize=12];
+    MassMails_DSTRON [label="MassMails_DSTRON", fontsize=12];
+    ConcerSecEcom_Alittle [label="ConcerSecEcom_Alittle", fontsize=12, shape=box];
+    ConcerSecEcom_Somewhat [label="ConcerSecEcom_Somewhat", fontsize=12, shape=box];
+    ValueAnon_ASTRON [label="ValueAnon_ASTRON", fontsize=12];
+    SecAFactor_Significant [label="SecAFactor_Significant", fontsize=12];
+    AttSpam_Delete [label="AttSpam_Delete", fontsize=12];
+    IntShop_LifeEasy [label="IntShop_LifeEasy", fontsize=12];
+    ConcerSecEcom_Alittle -- Important_Convenience [label="4, 101, 0.136", fontsize=10, style=bold];
+    Important_Convenience -- SecAFactor_Small [label="3, 117, 0.208", fontsize=10, style=bold];
+    Important_Convenience -- ConcerSec_Somewhat [label="5, 121, 0.111", fontsize=10, style=bold];
+    Important_Convenience -- ConcerSec_Alittle [label="2, 110, 0.158", fontsize=10, style=bold];
+    AttSpam_Delete -- IntPrivLaws_ASOME [label="11, 318, 0.233", fontsize=10, style=dotted];
+    ConcerSecEcom_Alittle -- ConcerSec_Alittle [label="1, 116, 0.262", fontsize=10, style=bold];
+    ConcerSecEcom_Somewhat -- ConcerSec_Somewhat [label="6, 143, 0.162", fontsize=10, style=bold];
+    IntShop_LifeEasy -- IntPrivLaws_ASOME [label="9, 380, 0.26", fontsize=10, style=dotted];
+    ConcerSec_Somewhat -- IntPrivLaws_ASOME [label="7, 150, 0.124", fontsize=10, style=bold];
+    ValueAnon_ASTRON -- IntPrivLaws_ASOME [label="15, 301, 0.202", fontsize=10, style=dotted];
+    Important_Privacy -- IntPrivLaws_ASOME [label="12, 346, 0.227", fontsize=10, style=dotted];
+    SecAFactor_Significant -- IntPrivLaws_ASOME [label="14, 250, 0.207", fontsize=10, style=dotted];
+    PrivCom_ASTRON -- IntPrivLaws_ASOME [label="10, 363, 0.238", fontsize=10, style=dotted];
+    MassMails_DSTRON -- IntPrivLaws_ASOME [label="13, 337, 0.22", fontsize=10, style=dotted];
+    Will_Charge -- IntPrivLaws_ASOME [label="8, 364, 0.26", fontsize=10, style=dotted];
+}

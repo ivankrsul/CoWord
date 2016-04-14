@@ -1,0 +1,31 @@
+graph G{
+    UserContDemo_ASTRON [label="UserContDemo_ASTRON", fontsize=12];
+    Will_Charge [label="Will_Charge", fontsize=12];
+    Important_Privacy [label="Important_Privacy", fontsize=12];
+    IPResell_DSOME [label="IPResell_DSOME", fontsize=12, shape=box];
+    AdvNet_DSOME [label="AdvNet_DSOME", fontsize=12, shape=box];
+    PrivCom_ASTRON [label="PrivCom_ASTRON", fontsize=12];
+    AssumeAliases_ASOME [label="AssumeAliases_ASOME", fontsize=12, shape=box];
+    MassMails_DSTRON [label="MassMails_DSTRON", fontsize=12];
+    UseDemoOther_DSOME [label="UseDemoOther_DSOME", fontsize=12, shape=box];
+    UserContDemo_ASOME [label="UserContDemo_ASOME", fontsize=12, shape=box];
+    ValueAnon_ASTRON [label="ValueAnon_ASTRON", fontsize=12];
+    AttSpam_Delete [label="AttSpam_Delete", fontsize=12];
+    IntShop_LifeEasy [label="IntShop_LifeEasy", fontsize=12];
+    MassMails_DSOME [label="MassMails_DSOME", fontsize=12, shape=box];
+    UseDemoOther_DSOME -- AdvNet_DSOME [label="4, 94, 0.109", fontsize=10, style=bold];
+    UserContDemo_ASOME -- UseDemoOther_DSOME [label="6, 87, 0.101", fontsize=10, style=bold];
+    IntShop_LifeEasy -- AssumeAliases_ASOME [label="8, 341, 0.239", fontsize=10, style=dotted];
+    UseDemoOther_DSOME -- IPResell_DSOME [label="1, 132, 0.213", fontsize=10, style=bold];
+    AdvNet_DSOME -- IPResell_DSOME [label="5, 91, 0.103", fontsize=10, style=bold];
+    UserContDemo_ASOME -- IPResell_DSOME [label="2, 92, 0.114", fontsize=10, style=bold];
+    AssumeAliases_ASOME -- PrivCom_ASTRON [label="9, 330, 0.225", fontsize=10, style=dotted];
+    ValueAnon_ASTRON -- AssumeAliases_ASOME [label="15, 246, 0.154", fontsize=10, style=dotted];
+    AssumeAliases_ASOME -- IPResell_DSOME [label="7, 106, 0.099", fontsize=10, style=bold];
+    AssumeAliases_ASOME -- Important_Privacy [label="11, 303, 0.2", fontsize=10, style=dotted];
+    AssumeAliases_ASOME -- Will_Charge [label="10, 313, 0.221", fontsize=10, style=dotted];
+    AssumeAliases_ASOME -- UserContDemo_ASTRON [label="14, 272, 0.171", fontsize=10, style=dotted];
+    MassMails_DSTRON -- AssumeAliases_ASOME [label="13, 296, 0.195", fontsize=10, style=dotted];
+    AttSpam_Delete -- AssumeAliases_ASOME [label="12, 274, 0.198", fontsize=10, style=dotted];
+    MassMails_DSOME -- IPResell_DSOME [label="3, 82, 0.11", fontsize=10, style=bold];
+}
